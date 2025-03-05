@@ -49,24 +49,90 @@ mvn spring-boot:run
 
 ## Estructura del proyecto
 ```
-src/
-├── main/
-│   ├── java/
-│   │   └── com/
-│   │       └── jaapa/
-│   │           ├── config/        # Configuraciones generales
-│   │           ├── controller/    # Controladores REST
-│   │           ├── dto/           # Objetos de transferencia de datos
-│   │           ├── exception/     # Manejo de excepciones
-│   │           ├── model/         # Entidades JPA
-│   │           ├── repository/    # Repositorios JPA
-│   │           ├── service/       # Servicios de negocio
-│   │           └── util/          # Clases de utilidad
-│   └── resources/
-│       ├── application.properties # Configuraciones de la aplicación
-│       ├── static/               # Recursos estáticos (si los hay)
-│       └── templates/            # Plantillas (si las hay)
-└── test/                         # Pruebas unitarias e integración
+com.tuempresa.aplicacion/
+├── Application.java (Clase principal con @SpringBootApplication)
+├── config/             (Configuraciones generales de Spring)
+│   ├── AppConfig.java  (Configuración general de la aplicación)
+│   ├── CacheConfig.java (Configuración de caché si se utiliza)
+│   ├── AsyncConfig.java (Configuración para operaciones asíncronas)
+│   └── SwaggerConfig.java (Configuración de documentación API)
+│
+├── security/           (Todo lo relacionado con seguridad)
+│   ├── config/         (Configuraciones de seguridad)
+│   │   └── SecurityConfig.java
+│   ├── filter/         (Filtros de seguridad)
+│   │   └── JwtAuthenticationFilter.java
+│   ├── jwt/            (Componentes relacionados con JWT si se usa)
+│   │   ├── JwtProvider.java
+│   │   └── JwtProperties.java
+│   └── service/        (Servicios específicos de seguridad)
+│       └── UserDetailsServiceImpl.java
+│
+├── controller/         (Controladores REST/MVC)
+│   ├── UsuarioController.java
+│   ├── ProductoController.java
+│   └── admin/          (Controladores para área administrativa)
+│       └── AdminController.java
+│
+├── service/            (Servicios con lógica de negocio)
+│   ├── UsuarioService.java (Interfaces de servicios)
+│   ├── ProductoService.java
+│   └── impl/           (Implementaciones concretas)
+│       ├── UsuarioServiceImpl.java
+│       └── ProductoServiceImpl.java
+│
+├── repository/         (Interfaces para acceso a datos)
+│   ├── UsuarioRepository.java
+│   └── ProductoRepository.java
+│
+├── entity/             (Entidades JPA/Modelos de datos)
+│   ├── Usuario.java
+│   ├── Producto.java
+│   ├── base/           (Clases base para entidades)
+│   │   └── BaseEntity.java (Entidad con campos comunes)
+│   └── embedded/       (Clases embebidas en entidades)
+│       └── Direccion.java
+│
+├── dto/                (Objetos de transferencia de datos)
+│   ├── request/        (DTOs para solicitudes)
+│   │   ├── UsuarioRequestDTO.java
+│   │   └── LoginRequestDTO.java
+│   ├── response/       (DTOs para respuestas)
+│   │   ├── UsuarioResponseDTO.java
+│   │   └── ApiResponseDTO.java
+│   └── mapper/         (Convertidores entre entidades y DTOs)
+│       ├── UsuarioMapper.java
+│       └── ProductoMapper.java
+│
+├── enum/               (Enumeraciones)
+│   ├── RolEnum.java
+│   ├── EstadoEnum.java
+│   └── TipoDocumentoEnum.java
+│
+├── exception/          (Excepciones y manejadores)
+│   ├── GlobalExceptionHandler.java (Manejador global)
+│   ├── ResourceNotFoundException.java
+│   ├── BadRequestException.java
+│   └── UnauthorizedException.java
+│
+├── util/               (Clases utilitarias)
+│   ├── DateUtils.java
+│   └── StringUtils.java
+│
+├── validation/         (Validaciones personalizadas)
+│   ├── annotation/     (Anotaciones de validación)
+│   │   └── UniqueEmail.java
+│   └── validator/      (Implementaciones de validadores)
+│       └── UniqueEmailValidator.java
+│
+├── scheduler/          (Tareas programadas)
+│   └── ReportScheduler.java
+│
+└── event/              (Eventos de la aplicación)
+    ├── listener/       (Oyentes de eventos)
+    │   └── UsuarioRegistradoListener.java
+    └── publisher/      (Publicadores de eventos)
+        └── EventPublisher.java                        # Pruebas unitarias e integración
 ```
 
 ## API Endpoints
