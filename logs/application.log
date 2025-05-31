@@ -1,0 +1,628 @@
+2025-05-30 08:28:00 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4h41m52s973ms858µs200ns).
+2025-05-30 15:40:36 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        us1_0.usu_sis_id,
+        us1_0.enabled,
+        us1_0.usu_sis_password,
+        us1_0.usu_sis_username 
+    from
+        jaapa_usuarios_sistema us1_0 
+    where
+        us1_0.usu_sis_username=?
+2025-05-30 15:40:36 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.usuario_id,
+        r1_1.rol_id,
+        r1_1.rol_descripcion,
+        r1_1.rol_nombre 
+    from
+        usuarios_sistema_roles r1_0 
+    join
+        jaapa_roles r1_1 
+            on r1_1.rol_id=r1_0.role_id 
+    where
+        r1_0.usuario_id=?
+2025-05-30 15:40:36 [http-nio-8080-exec-9] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 01000
+2025-05-30 15:40:36 [http-nio-8080-exec-9] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - la base de datos «jaapa_db» tiene una discordancia de versión de ordenamiento (“collation”)
+2025-05-30 15:40:37 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        us1_0.usu_sis_id,
+        us1_0.enabled,
+        us1_0.usu_sis_password,
+        us1_0.usu_sis_username 
+    from
+        jaapa_usuarios_sistema us1_0 
+    where
+        us1_0.usu_sis_username=?
+2025-05-30 15:40:37 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.usuario_id,
+        r1_1.rol_id,
+        r1_1.rol_descripcion,
+        r1_1.rol_nombre 
+    from
+        usuarios_sistema_roles r1_0 
+    join
+        jaapa_roles r1_1 
+            on r1_1.rol_id=r1_0.role_id 
+    where
+        r1_0.usuario_id=?
+2025-05-30 15:40:37 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        us1_0.usu_sis_id,
+        us1_0.enabled,
+        us1_0.usu_sis_password,
+        us1_0.usu_sis_username 
+    from
+        jaapa_usuarios_sistema us1_0 
+    where
+        us1_0.usu_sis_username=?
+2025-05-30 15:40:37 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.usuario_id,
+        r1_1.rol_id,
+        r1_1.rol_descripcion,
+        r1_1.rol_nombre 
+    from
+        usuarios_sistema_roles r1_0 
+    join
+        jaapa_roles r1_1 
+            on r1_1.rol_id=r1_0.role_id 
+    where
+        r1_0.usuario_id=?
+2025-05-30 15:40:37 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        us1_0.usu_sis_id,
+        us1_0.enabled,
+        us1_0.usu_sis_password,
+        us1_0.usu_sis_username 
+    from
+        jaapa_usuarios_sistema us1_0 
+    where
+        us1_0.usu_sis_username=?
+2025-05-30 15:40:37 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.usuario_id,
+        r1_1.rol_id,
+        r1_1.rol_descripcion,
+        r1_1.rol_nombre 
+    from
+        usuarios_sistema_roles r1_0 
+    join
+        jaapa_roles r1_1 
+            on r1_1.rol_id=r1_0.role_id 
+    where
+        r1_0.usuario_id=?
+2025-05-30 15:40:38 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        refresh_tokens
+        (expiry_date, token, usuario_id) 
+    values
+        (?, ?, ?)
+2025-05-30 15:40:38 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        us1_0.usu_sis_id,
+        us1_0.enabled,
+        us1_0.usu_sis_password,
+        us1_0.usu_sis_username 
+    from
+        jaapa_usuarios_sistema us1_0 
+    where
+        us1_0.usu_sis_username=?
+2025-05-30 15:40:38 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.usuario_id,
+        r1_1.rol_id,
+        r1_1.rol_descripcion,
+        r1_1.rol_nombre 
+    from
+        usuarios_sistema_roles r1_0 
+    join
+        jaapa_roles r1_1 
+            on r1_1.rol_id=r1_0.role_id 
+    where
+        r1_0.usuario_id=?
+2025-05-30 15:47:36 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        us1_0.usu_sis_id,
+        us1_0.enabled,
+        us1_0.usu_sis_password,
+        us1_0.usu_sis_username 
+    from
+        jaapa_usuarios_sistema us1_0 
+    where
+        us1_0.usu_sis_username=?
+2025-05-30 15:47:36 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.usuario_id,
+        r1_1.rol_id,
+        r1_1.rol_descripcion,
+        r1_1.rol_nombre 
+    from
+        usuarios_sistema_roles r1_0 
+    join
+        jaapa_roles r1_1 
+            on r1_1.rol_id=r1_0.role_id 
+    where
+        r1_0.usuario_id=?
+2025-05-30 15:47:36 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        us1_0.usu_sis_id,
+        us1_0.enabled,
+        us1_0.usu_sis_password,
+        us1_0.usu_sis_username 
+    from
+        jaapa_usuarios_sistema us1_0 
+    where
+        us1_0.usu_sis_username=?
+2025-05-30 15:47:36 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.usuario_id,
+        r1_1.rol_id,
+        r1_1.rol_descripcion,
+        r1_1.rol_nombre 
+    from
+        usuarios_sistema_roles r1_0 
+    join
+        jaapa_roles r1_1 
+            on r1_1.rol_id=r1_0.role_id 
+    where
+        r1_0.usuario_id=?
+2025-05-30 15:47:36 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        count(s1_0.sol_id),
+        coalesce(sum(s1_0.sol_monto_pagado), 0),
+        coalesce(sum(s1_0.sol_monto_pendiente), 0),
+        coalesce(sum(s1_0.sol_monto_total), 0),
+        sum(case 
+            when s1_0.sol_estado='APROBADA' 
+                then 1 
+            else 0 
+    end),
+    sum(case 
+        when s1_0.sol_estado='RECHAZADA' 
+            then 1 
+        else 0 
+end),
+sum(case 
+    when s1_0.sol_estado='EN_PROCESO' 
+        then 1 
+    else 0 
+end),
+sum(case 
+    when s1_0.sol_estado='COMPLETADA' 
+        then 1 
+    else 0 
+end) 
+from
+    jaapa_solicitudes s1_0
+2025-05-30 15:47:36 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.sol_id,
+        s1_0.sol_numero,
+        s1_0.sol_fecha,
+        s1_0.sol_estado,
+        s1_0.sol_estado_pago,
+        s1_0.sol_monto_total,
+        s1_0.sol_monto_pagado,
+        s1_0.sol_monto_pendiente,
+        u1_0.usu_nombre,
+        u1_0.usu_cedula,
+        ts1_0.tip_sol_nombre 
+    from
+        jaapa_solicitudes s1_0 
+    join
+        jaapa_usuarios u1_0 
+            on u1_0.usu_id=s1_0.usuario_usu_id 
+    join
+        jaapa_tipos_solicitud ts1_0 
+            on ts1_0.tip_sol_id=s1_0.tipo_solicitud_tip_sol_id 
+    order by
+        s1_0.sol_id desc 
+    fetch
+        first ? rows only
+2025-05-30 15:47:36 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        count(s1_0.sol_id) 
+    from
+        jaapa_solicitudes s1_0 
+    join
+        jaapa_usuarios u1_0 
+            on u1_0.usu_id=s1_0.usuario_usu_id 
+    join
+        jaapa_tipos_solicitud ts1_0 
+            on ts1_0.tip_sol_id=s1_0.tipo_solicitud_tip_sol_id
+2025-05-30 15:47:36 [http-nio-8080-exec-4] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 01000
+2025-05-30 15:47:36 [http-nio-8080-exec-4] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - la base de datos «jaapa_db» tiene una discordancia de versión de ordenamiento (“collation”)
+2025-05-30 15:48:04 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        us1_0.usu_sis_id,
+        us1_0.enabled,
+        us1_0.usu_sis_password,
+        us1_0.usu_sis_username 
+    from
+        jaapa_usuarios_sistema us1_0 
+    where
+        us1_0.usu_sis_username=?
+2025-05-30 15:48:04 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.usuario_id,
+        r1_1.rol_id,
+        r1_1.rol_descripcion,
+        r1_1.rol_nombre 
+    from
+        usuarios_sistema_roles r1_0 
+    join
+        jaapa_roles r1_1 
+            on r1_1.rol_id=r1_0.role_id 
+    where
+        r1_0.usuario_id=?
+2025-05-30 15:48:04 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        ts1_0.tip_sol_id,
+        ts1_0.tip_sol_condiciones,
+        ts1_0.tip_sol_costo,
+        ts1_0.tip_sol_descripcion,
+        ts1_0.tip_sol_fecha_creacion,
+        ts1_0.tip_sol_nombre,
+        t1_0.tar_id,
+        t1_0.tar_descripcion,
+        t1_0.tar_fecha_inicio,
+        t1_0.tar_limite_maximo_consumo,
+        t1_0.tar_adicional,
+        t1_0.tar_basica,
+        ts1_0.tip_sol_valor_diferido_inicial 
+    from
+        jaapa_tipos_solicitud ts1_0 
+    left join
+        jaapa_tarifas t1_0 
+            on t1_0.tar_id=ts1_0.tar_id
+2025-05-30 15:48:11 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        us1_0.usu_sis_id,
+        us1_0.enabled,
+        us1_0.usu_sis_password,
+        us1_0.usu_sis_username 
+    from
+        jaapa_usuarios_sistema us1_0 
+    where
+        us1_0.usu_sis_username=?
+2025-05-30 15:48:11 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.usuario_id,
+        r1_1.rol_id,
+        r1_1.rol_descripcion,
+        r1_1.rol_nombre 
+    from
+        usuarios_sistema_roles r1_0 
+    join
+        jaapa_roles r1_1 
+            on r1_1.rol_id=r1_0.role_id 
+    where
+        r1_0.usuario_id=?
+2025-05-30 15:48:11 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.usu_id,
+        u1_0.usu_apellido,
+        u1_0.usu_cedula,
+        u1_0.usu_celular,
+        u1_0.usu_correo,
+        u1_0.usu_estado,
+        u1_0.usu_fecha_nacimiento,
+        u1_0.usu_nombre,
+        u1_0.usu_telefono,
+        u1_0.usu_tipo_registro 
+    from
+        jaapa_usuarios u1_0 
+    where
+        u1_0.usu_cedula=?
+2025-05-30 15:48:22 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        us1_0.usu_sis_id,
+        us1_0.enabled,
+        us1_0.usu_sis_password,
+        us1_0.usu_sis_username 
+    from
+        jaapa_usuarios_sistema us1_0 
+    where
+        us1_0.usu_sis_username=?
+2025-05-30 15:48:22 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.usuario_id,
+        r1_1.rol_id,
+        r1_1.rol_descripcion,
+        r1_1.rol_nombre 
+    from
+        usuarios_sistema_roles r1_0 
+    join
+        jaapa_roles r1_1 
+            on r1_1.rol_id=r1_0.role_id 
+    where
+        r1_0.usuario_id=?
+2025-05-30 15:48:22 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.usu_id,
+        u1_0.usu_apellido,
+        u1_0.usu_cedula,
+        u1_0.usu_celular,
+        u1_0.usu_correo,
+        u1_0.usu_estado,
+        u1_0.usu_fecha_nacimiento,
+        u1_0.usu_nombre,
+        u1_0.usu_telefono,
+        u1_0.usu_tipo_registro 
+    from
+        jaapa_usuarios u1_0 
+    where
+        u1_0.usu_cedula=?
+2025-05-30 15:48:22 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        ts1_0.tip_sol_id,
+        ts1_0.tip_sol_condiciones,
+        ts1_0.tip_sol_costo,
+        ts1_0.tip_sol_descripcion,
+        ts1_0.tip_sol_fecha_creacion,
+        ts1_0.tip_sol_nombre,
+        ts1_0.tar_id,
+        ts1_0.tip_sol_valor_diferido_inicial 
+    from
+        jaapa_tipos_solicitud ts1_0 
+    where
+        ts1_0.tip_sol_nombre=?
+2025-05-30 15:48:22 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        jaapa_direcciones
+        (dir_barrio, dir_calle_principal, dir_calle_secundaria, dir_referencia, dir_tipo_registro) 
+    values
+        (?, ?, ?, ?, ?)
+2025-05-30 15:48:22 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        jaapa_solicitudes
+        (direccion_dir_id, sol_estado, sol_estado_pago, sol_fecha, sol_monto_pagado, sol_monto_pendiente, sol_monto_total, sol_numero, sol_tipo_pago, sol_tipo_registro, tipo_solicitud_tip_sol_id, sol_url_certificado_instalacion, usuario_usu_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-05-30 15:48:22 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        d1_0.dir_id,
+        d1_0.dir_barrio,
+        d1_0.dir_calle_principal,
+        d1_0.dir_calle_secundaria,
+        d1_0.dir_referencia,
+        d1_0.dir_tipo_registro 
+    from
+        jaapa_direcciones d1_0 
+    where
+        d1_0.dir_id=?
+2025-05-30 15:48:22 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.sol_id,
+        d1_0.dir_id,
+        d1_0.dir_barrio,
+        d1_0.dir_calle_principal,
+        d1_0.dir_calle_secundaria,
+        d1_0.dir_referencia,
+        d1_0.dir_tipo_registro,
+        s1_0.sol_estado,
+        s1_0.sol_estado_pago,
+        s1_0.sol_fecha,
+        m1_0.med_id,
+        m1_0.med_codigo,
+        m1_0.med_estado,
+        m1_0.med_marca,
+        m1_0.med_modelo,
+        m1_0.med_tipo_registro,
+        m1_0.usuario_usu_id,
+        c1_0.med_id_fk,
+        c1_0.con_id,
+        c1_0.con_consumo,
+        c1_0.con_costo_adicional,
+        c1_0.con_estado,
+        c1_0.con_estado_pago,
+        c1_0.con_fecha_corte,
+        c1_0.con_fecha_inicio,
+        c1_0.tar_id_fk,
+        c1_0.tar_tipo_registro,
+        c1_0.con_total,
+        c1_0.con_valor_actual,
+        c1_0.con_valor_anterior,
+        s1_0.sol_monto_pagado,
+        s1_0.sol_monto_pendiente,
+        s1_0.sol_monto_total,
+        s1_0.sol_numero,
+        s1_0.sol_tipo_pago,
+        s1_0.sol_tipo_registro,
+        s1_0.tipo_solicitud_tip_sol_id,
+        s1_0.sol_url_certificado_instalacion,
+        s1_0.usuario_usu_id 
+    from
+        jaapa_solicitudes s1_0 
+    left join
+        jaapa_direcciones d1_0 
+            on d1_0.dir_id=s1_0.direccion_dir_id 
+    left join
+        jaapa_medidores m1_0 
+            on s1_0.sol_id=m1_0.solicitud_sol_id 
+    left join
+        jaapa_consumos c1_0 
+            on m1_0.med_id=c1_0.med_id_fk 
+    where
+        s1_0.sol_id=?
+2025-05-30 15:48:22 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        d1_0.dir_id,
+        d1_0.dir_barrio,
+        d1_0.dir_calle_principal,
+        d1_0.dir_calle_secundaria,
+        d1_0.dir_referencia,
+        d1_0.dir_tipo_registro 
+    from
+        jaapa_direcciones d1_0 
+    where
+        d1_0.dir_id=?
+2025-05-30 15:48:22 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.sol_id,
+        d1_0.dir_id,
+        d1_0.dir_barrio,
+        d1_0.dir_calle_principal,
+        d1_0.dir_calle_secundaria,
+        d1_0.dir_referencia,
+        d1_0.dir_tipo_registro,
+        s1_0.sol_estado,
+        s1_0.sol_estado_pago,
+        s1_0.sol_fecha,
+        m1_0.med_id,
+        m1_0.med_codigo,
+        m1_0.med_estado,
+        m1_0.med_marca,
+        m1_0.med_modelo,
+        m1_0.med_tipo_registro,
+        m1_0.usuario_usu_id,
+        c1_0.med_id_fk,
+        c1_0.con_id,
+        c1_0.con_consumo,
+        c1_0.con_costo_adicional,
+        c1_0.con_estado,
+        c1_0.con_estado_pago,
+        c1_0.con_fecha_corte,
+        c1_0.con_fecha_inicio,
+        c1_0.tar_id_fk,
+        c1_0.tar_tipo_registro,
+        c1_0.con_total,
+        c1_0.con_valor_actual,
+        c1_0.con_valor_anterior,
+        s1_0.sol_monto_pagado,
+        s1_0.sol_monto_pendiente,
+        s1_0.sol_monto_total,
+        s1_0.sol_numero,
+        s1_0.sol_tipo_pago,
+        s1_0.sol_tipo_registro,
+        s1_0.tipo_solicitud_tip_sol_id,
+        s1_0.sol_url_certificado_instalacion,
+        s1_0.usuario_usu_id 
+    from
+        jaapa_solicitudes s1_0 
+    left join
+        jaapa_direcciones d1_0 
+            on d1_0.dir_id=s1_0.direccion_dir_id 
+    left join
+        jaapa_medidores m1_0 
+            on s1_0.sol_id=m1_0.solicitud_sol_id 
+    left join
+        jaapa_consumos c1_0 
+            on m1_0.med_id=c1_0.med_id_fk 
+    where
+        s1_0.sol_id=?
+2025-05-30 15:48:40 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        us1_0.usu_sis_id,
+        us1_0.enabled,
+        us1_0.usu_sis_password,
+        us1_0.usu_sis_username 
+    from
+        jaapa_usuarios_sistema us1_0 
+    where
+        us1_0.usu_sis_username=?
+2025-05-30 15:48:40 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.usuario_id,
+        r1_1.rol_id,
+        r1_1.rol_descripcion,
+        r1_1.rol_nombre 
+    from
+        usuarios_sistema_roles r1_0 
+    join
+        jaapa_roles r1_1 
+            on r1_1.rol_id=r1_0.role_id 
+    where
+        r1_0.usuario_id=?
+2025-05-30 15:48:40 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        us1_0.usu_sis_id,
+        us1_0.enabled,
+        us1_0.usu_sis_password,
+        us1_0.usu_sis_username 
+    from
+        jaapa_usuarios_sistema us1_0 
+    where
+        us1_0.usu_sis_username=?
+2025-05-30 15:48:40 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        count(s1_0.sol_id),
+        coalesce(sum(s1_0.sol_monto_pagado), 0),
+        coalesce(sum(s1_0.sol_monto_pendiente), 0),
+        coalesce(sum(s1_0.sol_monto_total), 0),
+        sum(case 
+            when s1_0.sol_estado='APROBADA' 
+                then 1 
+            else 0 
+    end),
+    sum(case 
+        when s1_0.sol_estado='RECHAZADA' 
+            then 1 
+        else 0 
+end),
+sum(case 
+    when s1_0.sol_estado='EN_PROCESO' 
+        then 1 
+    else 0 
+end),
+sum(case 
+    when s1_0.sol_estado='COMPLETADA' 
+        then 1 
+    else 0 
+end) 
+from
+    jaapa_solicitudes s1_0
+2025-05-30 15:48:40 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.usuario_id,
+        r1_1.rol_id,
+        r1_1.rol_descripcion,
+        r1_1.rol_nombre 
+    from
+        usuarios_sistema_roles r1_0 
+    join
+        jaapa_roles r1_1 
+            on r1_1.rol_id=r1_0.role_id 
+    where
+        r1_0.usuario_id=?
+2025-05-30 15:48:40 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.sol_id,
+        s1_0.sol_numero,
+        s1_0.sol_fecha,
+        s1_0.sol_estado,
+        s1_0.sol_estado_pago,
+        s1_0.sol_monto_total,
+        s1_0.sol_monto_pagado,
+        s1_0.sol_monto_pendiente,
+        u1_0.usu_nombre,
+        u1_0.usu_cedula,
+        ts1_0.tip_sol_nombre 
+    from
+        jaapa_solicitudes s1_0 
+    join
+        jaapa_usuarios u1_0 
+            on u1_0.usu_id=s1_0.usuario_usu_id 
+    join
+        jaapa_tipos_solicitud ts1_0 
+            on ts1_0.tip_sol_id=s1_0.tipo_solicitud_tip_sol_id 
+    order by
+        s1_0.sol_id desc 
+    fetch
+        first ? rows only
+2025-05-30 15:48:40 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        count(s1_0.sol_id) 
+    from
+        jaapa_solicitudes s1_0 
+    join
+        jaapa_usuarios u1_0 
+            on u1_0.usu_id=s1_0.usuario_usu_id 
+    join
+        jaapa_tipos_solicitud ts1_0 
+            on ts1_0.tip_sol_id=s1_0.tipo_solicitud_tip_sol_id
