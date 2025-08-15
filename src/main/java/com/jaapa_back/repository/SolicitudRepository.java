@@ -36,7 +36,7 @@ public interface SolicitudRepository extends JpaRepository<Solicitud, Long> {
             "s.montoTotal, s.montoPagado, s.montoPendiente, " +
             "u.nombre, u.cedula, t.nombre) " +
             "FROM Solicitud s " +
-            "JOIN s.usuario u " +
+            "JOIN s.persona u " +
             "JOIN s.tipoSolicitud t" )
     Page<SolicitudProjection> findAllProjectedPaginated(Pageable pageable);
 
@@ -55,7 +55,7 @@ public interface SolicitudRepository extends JpaRepository<Solicitud, Long> {
             "s.montoTotal, s.montoPagado, s.montoPendiente, " +
             "u.nombre, u.cedula, t.nombre) " +
             "FROM Solicitud s " +
-            "JOIN s.usuario u " +
+            "JOIN s.persona u " +
             "JOIN s.tipoSolicitud t " +
             "WHERE s.estado = :estado")
     Page<SolicitudProjection> findAllProjectedByEstado(Pageable pageable, @Param("estado") EstadoSolicitudEnum estado);
@@ -71,7 +71,7 @@ public interface SolicitudRepository extends JpaRepository<Solicitud, Long> {
             "s.montoTotal, s.montoPagado, s.montoPendiente, " +
             "u.nombre, u.cedula, t.nombre) " +
             "FROM Solicitud s " +
-            "JOIN s.usuario u " +
+            "JOIN s.persona u " +
             "JOIN s.tipoSolicitud t " +
             "WHERE UPPER(s.estado) LIKE UPPER(CONCAT('%', :estado, '%'))")
     Page<SolicitudProjection> findAllProjectedByEstadoContains(Pageable pageable, @Param("estado") String estado);
@@ -91,20 +91,20 @@ public interface SolicitudRepository extends JpaRepository<Solicitud, Long> {
             "s.montoTotal, s.montoPagado, s.montoPendiente, " +
             "u.nombre, u.cedula, t.nombre) " +
             "FROM Solicitud s " +
-            "JOIN s.usuario u " +
+            "JOIN s.persona u " +
             "JOIN s.tipoSolicitud t " +
             "WHERE s.numeroSolicitud = :numeroSolicitud")
     Page<SolicitudProjection> findAllProjectedByNumeroSolicitud(Pageable pageable, @Param("numeroSolicitud") String numeroSolicitud);
 
     /* ==================================================================
-     *  CONSULTAS PARA FILTRAR POR NÚMERO DE CEDULA DE USUARIO
+     *  CONSULTAS PARA FILTRAR POR NÚMERO DE CEDULA DE persona
      * =================================================================== */
     @Query("SELECT new com.jaapa_back.projection.SolicitudProjection(" +
             "s.id, s.numeroSolicitud, s.fecha, s.estado, s.estadoPago, " +
             "s.montoTotal, s.montoPagado, s.montoPendiente, " +
             "u.nombre, u.cedula, t.nombre) " +
             "FROM Solicitud s " +
-            "JOIN s.usuario u " +
+            "JOIN s.persona u " +
             "JOIN s.tipoSolicitud t " +
             "WHERE u.cedula = :cedulaUsuario")
     Page<SolicitudProjection> findAllProjectedByCedulaUsuario(Pageable pageable, @Param("cedulaUsuario") String cedulaUsuario);
@@ -122,7 +122,7 @@ public interface SolicitudRepository extends JpaRepository<Solicitud, Long> {
             "s.montoTotal, s.montoPagado, s.montoPendiente, " +
             "u.nombre, u.cedula, t.nombre) " +
             "FROM Solicitud s " +
-            "JOIN s.usuario u " +
+            "JOIN s.persona u " +
             "JOIN s.tipoSolicitud t " +
             "WHERE s.fecha = :fecha")
     Page<SolicitudProjection> findAllProjectedByFechaEquals(Pageable pageable, @Param("fecha") LocalDate fecha);
@@ -136,7 +136,7 @@ public interface SolicitudRepository extends JpaRepository<Solicitud, Long> {
             "s.montoTotal, s.montoPagado, s.montoPendiente, " +
             "u.nombre, u.cedula, t.nombre) " +
             "FROM Solicitud s " +
-            "JOIN s.usuario u " +
+            "JOIN s.persona u " +
             "JOIN s.tipoSolicitud t " +
             "WHERE s.fecha < :fecha")
     Page<SolicitudProjection> findAllProjectedByFechaBefore(Pageable pageable, @Param("fecha") LocalDate fecha);
@@ -150,7 +150,7 @@ public interface SolicitudRepository extends JpaRepository<Solicitud, Long> {
             "s.montoTotal, s.montoPagado, s.montoPendiente, " +
             "u.nombre, u.cedula, t.nombre) " +
             "FROM Solicitud s " +
-            "JOIN s.usuario u " +
+            "JOIN s.persona u " +
             "JOIN s.tipoSolicitud t " +
             "WHERE s.fecha > :fecha")
     Page<SolicitudProjection> findAllProjectedByFechaAfter(Pageable pageable, @Param("fecha") LocalDate fecha);
@@ -165,7 +165,7 @@ public interface SolicitudRepository extends JpaRepository<Solicitud, Long> {
             "s.montoTotal, s.montoPagado, s.montoPendiente, " +
             "u.nombre, u.cedula, t.nombre) " +
             "FROM Solicitud s " +
-            "JOIN s.usuario u " +
+            "JOIN s.persona u " +
             "JOIN s.tipoSolicitud t " +
             "WHERE s.fecha BETWEEN :fechaFrom AND :fechaTo")
     Page<SolicitudProjection> findAllProjectedByFechaBetween(Pageable pageable,
@@ -323,7 +323,7 @@ public interface SolicitudRepository extends JpaRepository<Solicitud, Long> {
             "SUM(CASE WHEN s.estado = 'EN_PROCESO' THEN 1 ELSE 0 END), " +
             "SUM(CASE WHEN s.estado = 'COMPLETADA' THEN 1 ELSE 0 END)) " +
             "FROM Solicitud s " +
-            "JOIN s.usuario u " +
+            "JOIN s.persona u " +
             "WHERE u.cedula = :cedulaUsuario")
     SolicitudSummaryProjection findSummaryByCedulaUsuario(@Param("cedulaUsuario") String cedulaUsuario);
 
@@ -346,7 +346,7 @@ public interface SolicitudRepository extends JpaRepository<Solicitud, Long> {
             "m.id, m.codigo, m.marca, m.modelo, m.estado, " +
             "s.urlCertificadoInstalacion) " +
             "FROM Solicitud s " +
-            "JOIN s.usuario u " +
+            "JOIN s.persona u " +
             "LEFT JOIN s.direccion d " +
             "LEFT JOIN s.medidor m " +
             "WHERE s.id = :solicitudId")

@@ -119,30 +119,6 @@ public class SolicitudService {
         if (solicitud.getNumeroSolicitud() == null || solicitud.getNumeroSolicitud().trim().isEmpty()) {
             throw new ValorActualIncorrectoException("Número de solicitud no encontrado.");
         }
-        //PARA CREAR LA SOLICUD EN PDF YA LO HAGO EN EL FROND CON ANGULAR
-//        try {
-//            // Generar y guardar el PDF
-//            byte[] pdfBytes = pdfService.generatePdf(solicitud);
-//
-//            // Guardar el documento en el sistema de archivos y su referencia en BD
-//            Documento documento = pdfService.savePdfToFile(solicitud);
-//            log.info("PDF guardado exitosamente para la solicitud: {}", solicitud.getNumeroSolicitud());
-//
-//            // Enviar el correo con el PDF
-//            Correo correo = this.creatCorreo(solicitud, pdfBytes);
-//            emailService.sendEmail(correo);
-//            log.info("PDF enviado por correo exitosamente para la solicitud: {}", solicitud.getNumeroSolicitud());
-//        } catch (DocumentoException e) {
-//            // Si falla el PDF, registramos el error pero no interrumpimos la transacción
-//            log.error("Error al procesar el documento para la solicitud: {}", solicitud.getNumeroSolicitud(), e);
-//        } catch (EmailServiceException e) {
-//            // Si falla el envío de correo, registramos el error pero no interrumpimos la transacción
-//            log.error("Error al enviar correo para la solicitud: {}", solicitud.getNumeroSolicitud(), e);
-//        } catch (Exception e) {
-//            // Otros errores no esperados en el proceso de PDF o correo
-//            log.error("Error inesperado al procesar la documentación de la solicitud: {}", solicitud.getNumeroSolicitud(), e);
-//        }
-
         return solicitud;
     }
 
